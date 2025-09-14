@@ -25,7 +25,7 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center">
+      <div className="relative z-10 container mx-auto px-4 text-center pb-6">
         <div className="max-w-4xl mx-auto animate-slide-up">
           {/* Logo/Brand */}
           <div className="mb-8 mt-[80px]">
