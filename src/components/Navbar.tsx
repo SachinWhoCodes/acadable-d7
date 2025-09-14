@@ -28,8 +28,9 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <Code className="h-8 w-8 text-neon-blue" />
-            <span className="text-xl font-bold text-gradient-primary">ACADABLE</span>
+            <img src="../assets/logo_white.png" className="h-8" />
+            {/* <Code className="h-8 w-8 text-neon-blue" />
+            <span className="text-xl font-bold text-gradient-primary">ACADABLE</span> */}
           </div>
 
           {/* Desktop Navigation */}
