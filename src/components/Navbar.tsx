@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Code, Github, Linkedin } from "lucide-react";
+import logoWhite from "@/assets/logo_white.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,7 +29,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <img src="../assets/logo_white.png" className="h-8" />
+            <img src={logoWhite} className="h-8" />
             {/* <Code className="h-8 w-8 text-neon-blue" />
             <span className="text-xl font-bold text-gradient-primary">ACADABLE</span> */}
           </div>
