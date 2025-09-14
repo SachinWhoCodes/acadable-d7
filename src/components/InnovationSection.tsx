@@ -110,21 +110,21 @@ const InnovationSection = () => {
             <div className="grid md:grid-cols-3 gap-6">
               <div className="text-center">
                 <div className="w-16 h-16 bg-neon-blue rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-background">12</span>
+                  <span className="text-2xl font-bold text-background">10</span>
                 </div>
                 <h4 className="font-semibold mb-2">Projects Launched</h4>
                 <p className="text-muted-foreground text-sm">Successfully launched under Acadable brand</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-neon-purple rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-background">50+</span>
+                  <span className="text-2xl font-bold text-background">46+</span>
                 </div>
                 <h4 className="font-semibold mb-2">Students Mentored</h4>
                 <p className="text-muted-foreground text-sm">Received guidance and support</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-neon-green rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-background">₹5L+</span>
+                  <span className="text-2xl font-bold text-background">₹3.4L+</span>
                 </div>
                 <h4 className="font-semibold mb-2">Funding Provided</h4>
                 <p className="text-muted-foreground text-sm">Total investment in student projects</p>

@@ -42,7 +42,7 @@ const HeroSection = () => {
 
           {/* Subheading */}
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
-            Acadable is where students don't just learn—they create. Join our 
+            Acadable is where students don't just learn-they create. Join our 
             <span className="text-neon-blue font-semibold"> tech-first ecosystem</span> for 
             <span className="text-neon-purple font-semibold"> open-source</span>, 
             <span className="text-neon-green font-semibold"> student-led innovation</span>.
@@ -64,7 +64,7 @@ const HeroSection = () => {
             <div className="bg-card/20 backdrop-blur-sm border border-primary/20 rounded-lg p-6 hover:border-primary/40 transition-smooth">
               <Users className="h-8 w-8 text-neon-blue mx-auto mb-4" />
               <div className="text-3xl font-bold text-neon-blue">3000+</div>
-              <div className="text-muted-foreground">Active Members</div>
+              <div className="text-muted-foreground">On-campus Members</div>
             </div>
             <div className="bg-card/20 backdrop-blur-sm border border-secondary/20 rounded-lg p-6 hover:border-secondary/40 transition-smooth">
               <Code className="h-8 w-8 text-neon-purple mx-auto mb-4" />
@@ -73,7 +73,7 @@ const HeroSection = () => {
             </div>
             <div className="bg-card/20 backdrop-blur-sm border border-accent/20 rounded-lg p-6 hover:border-accent/40 transition-smooth">
               <GitBranch className="h-8 w-8 text-neon-green mx-auto mb-4" />
-              <div className="text-3xl font-bold text-neon-green">100+</div>
+              <div className="text-3xl font-bold text-neon-green">10+</div>
               <div className="text-muted-foreground">Projects</div>
             </div>
           </div>

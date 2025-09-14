@@ -38,16 +38,16 @@ const AboutSection = () => {
                 <h3 className="text-2xl font-bold mb-3">Birth of Acadable</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   Rebranded to Acadable with a clear vision: create a tech-first ecosystem 
-                  where students don't just consume knowledge—they create it.
+                  where students don't just consume knowledge-they create it.
                 </p>
               </div>
 
               <div className="border-l-4 border-accent pl-6">
                 <div className="flex items-center gap-3 mb-3">
                   <Users className="h-5 w-5 text-neon-green" />
-                  <span className="text-neon-green font-semibold">Present - The Community</span>
+                  <span className="text-neon-green font-semibold">Add on - The Community</span>
                 </div>
-                <h3 className="text-2xl font-bold mb-3">Programming++ Community</h3>
+                <h3 className="text-2xl font-bold mb-3">ADC Community</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   Now home to 3000+ active members across 3 campuses, fostering 
                   innovation, collaboration, and real-world impact.
