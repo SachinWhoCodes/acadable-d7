@@ -28,7 +28,7 @@ const HeroSection = () => {
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto animate-slide-up">
           {/* Logo/Brand */}
-          <div className="mb-8">
+          <div className="mb-8 mt-[80px]">
             <h1 className="text-6xl md:text-8xl font-black text-gradient-primary mb-4 animate-glow">
               ACADABLE
             </h1>
