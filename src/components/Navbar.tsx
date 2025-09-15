@@ -1,13 +1,16 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Code, Github, Linkedin } from "lucide-react";
-import logoWhite from "@/assets/logo_white.png";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const navLinks = [
-    { name: "About", href: "#about" },
+    { name: "Home", href: "/" },
+    { name: "About Us", href: "/about" },
     { name: "Courses", href: "#courses" },
     { name: "Innovation", href: "#innovation" },
     { name: "Tools", href: "#tools" },
@@ -15,10 +18,27 @@ const Navbar = () => {
     { name: "Community", href: "#community" },
   ];
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+  const handleNavigation = (href: string) => {
+    if (href.startsWith('/')) {
+      // Route navigation
+      navigate(href);
+    } else {
+      // Scroll to section (only on home page)
+      if (location.pathname === '/') {
+        const element = document.querySelector(href);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      } else {
+        // Navigate to home then scroll
+        navigate('/');
+        setTimeout(() => {
+          const element = document.querySelector(href);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100);
+      }
     }
     setIsMenuOpen(false);
   };
@@ -29,9 +49,8 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <img src={logoWhite} className="h-8" />
-            {/* <Code className="h-8 w-8 text-neon-blue" />
-            <span className="text-xl font-bold text-gradient-primary">ACADABLE</span> */}
+            <Code className="h-8 w-8 text-neon-blue" />
+            <span className="text-xl font-bold text-gradient-primary">ACADABLE</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -39,7 +58,7 @@ const Navbar = () => {
             {navLinks.map((link) => (
               <button
                 key={link.name}
-                onClick={() => scrollToSection(link.href)}
+                onClick={() => handleNavigation(link.href)}
                 className="text-muted-foreground hover:text-primary transition-smooth relative group"
               >
                 {link.name}
@@ -87,7 +106,7 @@ const Navbar = () => {
               {navLinks.map((link) => (
                 <button
                   key={link.name}
-                  onClick={() => scrollToSection(link.href)}
+                  onClick={() => handleNavigation(link.href)}
                   className="block w-full text-left text-muted-foreground hover:text-primary transition-smooth py-2"
                 >
                   {link.name}
