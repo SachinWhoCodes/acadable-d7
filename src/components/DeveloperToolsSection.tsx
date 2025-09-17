@@ -13,10 +13,10 @@ const DeveloperToolsSection = () => {
   const tools = [
     {
       icon: Terminal,
-      name: "CodeFlow IDE",
-      description: "AI-powered code editor with intelligent auto-completion and real-time collaboration",
+      name: "SAGIT",
+      description: "Sagit extends Git with intelligent source code analysis capabilities, providing metadata tracking, AI-powered insights, and enhanced development workflows while maintaining full Git compatibility.",
       status: "In Development",
-      features: ["AI Code Completion", "Live Collaboration", "Git Integration", "Cloud Sync"],
+      features: ["Git Compatibility", "Metadata Tracking", "AI Integration", "Performance"],
       color: "neon-blue"
     },
     {
