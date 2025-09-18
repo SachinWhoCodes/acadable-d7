@@ -193,7 +193,7 @@ const GoogleSDESheet = () => {
           
           <div className="mb-6">
             <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-neon-cyan bg-clip-text text-transparent">
-              Google SDE Sheet - DSA Questions Asked In Interview
+              Google SDE Sheet - DSA Questions Asked In Interview :
             </h1>
             <p className="text-muted-foreground mb-4 max-w-4xl">
               This course is made for people who want to learn DSA from A to Z for free in a well-organized and structured manner. Master data structures and algorithms with interactive problems, detailed explanations, and comprehensive resources.
