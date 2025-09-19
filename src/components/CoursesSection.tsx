@@ -14,7 +14,7 @@ const CoursesSection = () => {
   const courses = [
     {
       icon: Code2,
-      title: "Programming Languages",
+      title: "Google SDE Sheet",
       description: "Master C++, Python, Java, JavaScript, and more with hands-on projects",
       technologies: ["C++", "Python", "Java", "JavaScript", "Go", "Rust"],
       level: "Beginner to Advanced",

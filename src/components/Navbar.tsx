@@ -11,6 +11,7 @@ const Navbar = () => {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
+    { name: "DSA Sheet", href: "/google-sde-sheet" },
     { name: "Courses", href: "#courses" },
     { name: "Innovation", href: "#innovation" },
     { name: "Tools", href: "#tools" },
