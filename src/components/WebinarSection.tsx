@@ -10,7 +10,7 @@ const WebinarSection = () => {
   const featuredWebinar = {
     status: "upcoming",
 	  title: "Build Production-Ready RAG Chatbots with React Native & Python",
-	  subtitle: "Go from zero to deployed Android AI app. Master RAG, FastAPI, LangChain, and React Native in this comprehensive masterclass.",
+	  subtitle: "Go from zero to deployed Android AI app. Master RAG, FastAPI, LangChain, and React Native in this master-course.",
 	  date: "From 2025-12-20",
 	  time: "Daily",
 	  duration: "30 Days",
@@ -135,10 +135,12 @@ const WebinarSection = () => {
 
               {/* CTAs */}
               <div className="flex flex-wrap gap-4 pt-4">
-                <Button size="lg" className="group">
-                  {featuredWebinar.status === "recorded" ? "Watch Recording" : "Enrol Now"}
-                  <Play className="ml-2 h-5 w-5 transition-transform group-hover:scale-110" />
-                </Button>
+                <a href="https://courses.acadable.com/courses/Building-a-RAG-Chatbot-with-React-Native--Python-69215acc05bd3a732af08340">
+                  <Button size="lg" className="group">
+                    {featuredWebinar.status === "recorded" ? "Watch Recording" : "Enrol Now"}
+                    <Play className="ml-2 h-5 w-5 transition-transform group-hover:scale-110" />
+                  </Button>
+                </a>
                 <a href="https://courses.acadable.com/s/store">
                   <Button variant="outline" size="lg">
                     All Courses
@@ -185,8 +187,8 @@ const WebinarSection = () => {
 
                 {/* Floating stats */}
                 <div className="absolute -bottom-4 -right-4 bg-card border border-border rounded-xl p-4 shadow-lg">
-                  <p className="text-2xl font-bold text-primary">3000+</p>
-                  <p className="text-sm text-muted-foreground">Attendees</p>
+                  <p className="text-2xl font-bold text-primary">100+</p>
+                  <p className="text-sm text-muted-foreground">Students</p>
                 </div>
               </div>
             </div>

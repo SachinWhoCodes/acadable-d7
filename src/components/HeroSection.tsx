@@ -15,7 +15,7 @@ const HeroSection = () => {
 
           {/* Subheading */}
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
-            Acadable is where students don't just learn—they create. Join our 
+            Acadable is where students don't just learn, they create. Join our 
             <span className="text-foreground font-semibold"> tech-first ecosystem</span> for 
             <span className="text-foreground font-semibold"> open-source</span>, 
             <span className="text-foreground font-semibold"> student-led innovation</span>.
@@ -29,7 +29,7 @@ const HeroSection = () => {
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>
             </a>
-            <a href="/ecosystem">
+            <a href="https://drive.google.com/file/d/1r6jTANpXAOOXaXwV8aQsLgQpVlGwAso8/view?usp=sharing">
               <Button variant="outline" size="lg">
                 Explore Ecosystem
               </Button>
