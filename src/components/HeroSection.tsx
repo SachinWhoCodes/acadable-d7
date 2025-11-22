@@ -23,7 +23,7 @@ const HeroSection = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-20">
-            <a href="https://courses.acadable.com/store">
+            <a href="https://courses.acadable.com/s/store">
               <Button size="lg" className="group">
                 Our Courses
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />

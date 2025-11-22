@@ -11,7 +11,7 @@ const WebinarSection = () => {
     status: "upcoming",
 	  title: "Build Production-Ready RAG Chatbots with React Native & Python",
 	  subtitle: "Go from zero to deployed Android AI app. Master RAG, FastAPI, LangChain, and React Native in this comprehensive masterclass.",
-	  date: "2025-12-20",
+	  date: "From 2025-12-20",
 	  time: "Daily",
 	  duration: "30 Days",
 	  speakers: [
@@ -23,7 +23,7 @@ const WebinarSection = () => {
 	    "Building a high-performance FastAPI backend for AI processing",
 	    "Developing a native Android chat interface with React Native & Expo"
 	  ],
-	  registrationLink: "https://www.acadable.com"
+	  registrationLink: "https://courses.acadable.com/courses/Building-a-RAG-Chatbot-with-React-Native--Python-69215acc05bd3a732af08340"
 	};
 
   // Past webinars
@@ -74,7 +74,7 @@ const WebinarSection = () => {
             {/* Left Column - Content */}
             <div className="space-y-8 animate-slide-in-left">
               <Badge variant="secondary" className="px-4 py-2 text-sm font-medium bg-primary/10 text-primary border-primary/20">
-                Featured
+                Featured Course
               </Badge>
 
               <div className="space-y-4">
@@ -136,12 +136,14 @@ const WebinarSection = () => {
               {/* CTAs */}
               <div className="flex flex-wrap gap-4 pt-4">
                 <Button size="lg" className="group">
-                  {featuredWebinar.status === "recorded" ? "Watch Recording" : "Register Now"}
+                  {featuredWebinar.status === "recorded" ? "Watch Recording" : "Enrol Now"}
                   <Play className="ml-2 h-5 w-5 transition-transform group-hover:scale-110" />
                 </Button>
-                <Button variant="outline" size="lg">
-                  Add to Calendar
-                </Button>
+                <a href="https://courses.acadable.com/s/store">
+                  <Button variant="outline" size="lg">
+                    All Courses
+                  </Button>
+                </a>
               </div>
             </div>
 
