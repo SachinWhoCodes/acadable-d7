@@ -34,7 +34,7 @@ interface CourseStep {
   }[];
 }
 
-const GoogleSDESheet = () => {
+const CoursePage = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeFilter, setActiveFilter] = useState('All Problems');
   const [openAccordions, setOpenAccordions] = useState<string[]>(['step-1']);
@@ -193,7 +193,7 @@ const GoogleSDESheet = () => {
           
           <div className="mb-6">
             <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-neon-cyan bg-clip-text text-transparent">
-              Google SDE Sheet - DSA Questions Asked In Interview :
+              Striver's A2Z DSA Course
             </h1>
             <p className="text-muted-foreground mb-4 max-w-4xl">
               This course is made for people who want to learn DSA from A to Z for free in a well-organized and structured manner. Master data structures and algorithms with interactive problems, detailed explanations, and comprehensive resources.
@@ -202,7 +202,7 @@ const GoogleSDESheet = () => {
               <Button variant="outline">
                 Know More
               </Button>
-              <Button variant="neon" size="sm">
+              <Button variant="outline" size="sm">
                 Track Progress
               </Button>
               <Button variant="outline" size="sm">
@@ -446,4 +446,4 @@ const GoogleSDESheet = () => {
   );
 };
 
-export default GoogleSDESheet;
+export default CoursePage;

@@ -63,30 +63,29 @@ const About = () => {
 
   const coreTeam = [
     {
-      name: "Jatin Namdev",
+      name: "Rahul Sharma",
       role: "Chief Technology Officer",
       image: "/placeholder.svg",
       skills: ["Full Stack Development", "System Architecture", "DevOps"]
     },
     {
-      name: "Nitin Dhakad",
+      name: "Priya Patel",
       role: "Head of Academics",
       image: "/placeholder.svg", 
       skills: ["Curriculum Design", "Student Mentoring", "Quality Assurance"]
     },
     {
-      name: "Sourabh Dhakad",
+      name: "Arjun Singh",
       role: "Community Manager",
       image: "/placeholder.svg",
       skills: ["Community Building", "Event Management", "Student Engagement"]
+    },
+    {
+      name: "Neha Gupta",
+      role: "Head of Innovation",
+      image: "/placeholder.svg",
+      skills: ["Project Management", "Research & Development", "Startup Incubation"]
     }
-    //,
-    // {
-    //   name: "",
-    //   role: "Head of Innovation",
-    //   image: "/placeholder.svg",
-    //   skills: ["Project Management", "Research & Development", "Startup Incubation"]
-    // }
   ];
 
   return (
@@ -185,7 +184,7 @@ const About = () => {
                     {/* Photo Caption */}
                     <div className="mt-6 p-4 rounded-lg bg-primary/5 border border-primary/10">
                       <p className="text-sm text-muted italic">
-                        Gaulok Vashi Shri Ramjilal Verma (-2021)<br />
+                        Late Shri Ramjilal Verma (1925-2018)<br />
                         "A visionary educator and our guiding light"
                       </p>
                     </div>

@@ -239,7 +239,7 @@ const CourseSidebar = () => {
           <p className="text-sm text-muted-foreground mb-4">
             Unlock advanced features, detailed solutions, and personalized learning paths
           </p>
-          <Button variant="neon" size="sm" className="w-full">
+          <Button variant="outline" size="sm" className="w-full">
             Upgrade Now
           </Button>
         </div>
