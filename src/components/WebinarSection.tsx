@@ -8,24 +8,23 @@ const WebinarSection = () => {
 
   // Featured webinar (most recent)
   const featuredWebinar = {
-    status: "upcoming", // "upcoming" | "live" | "recorded"
-    title: "Building Scalable Web Applications with Modern Tech Stack",
-    subtitle: "Learn how to architect and deploy production-ready applications using React, Node.js, and cloud infrastructure",
-    date: "2025-12-15",
-    time: "18:00 IST",
-    duration: "90 min",
-    speakers: [
-      { name: "Priya Sharma", role: "Senior Engineer @ Google", avatar: "PS" },
-      { name: "Rahul Verma", role: "Tech Lead @ Microsoft", avatar: "RV" },
-      { name: "Ananya Kumar", role: "CTO @ Startup", avatar: "AK" }
-    ],
-    takeaways: [
-      "Modern architecture patterns for scalable applications",
-      "Best practices for CI/CD and deployment automation",
-      "Performance optimization techniques and monitoring"
-    ],
-    registrationLink: "#register"
-  };
+    status: "upcoming",
+	  title: "Build Production-Ready RAG Chatbots with React Native & Python",
+	  subtitle: "Go from zero to deployed Android AI app. Master RAG, FastAPI, LangChain, and React Native in this comprehensive masterclass.",
+	  date: "2025-12-20",
+	  time: "Daily",
+	  duration: "30 Days",
+	  speakers: [
+	    { name: "Sachin Verma", role: "Lead Instructor @Acadable", avatar: "SV" },
+	    { name: "Rudra Mishra", role: "React Native Developer", avatar: "RM" }
+	  ],
+	  takeaways: [
+	    "Architecting a complete RAG system with LangChain & Pinecone",
+	    "Building a high-performance FastAPI backend for AI processing",
+	    "Developing a native Android chat interface with React Native & Expo"
+	  ],
+	  registrationLink: "https://www.acadable.com"
+	};
 
   // Past webinars
   const pastWebinars = [
@@ -75,7 +74,7 @@ const WebinarSection = () => {
             {/* Left Column - Content */}
             <div className="space-y-8 animate-slide-in-left">
               <Badge variant="secondary" className="px-4 py-2 text-sm font-medium bg-primary/10 text-primary border-primary/20">
-                Recent Webinar
+                Featured
               </Badge>
 
               <div className="space-y-4">
