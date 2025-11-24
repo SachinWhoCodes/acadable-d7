@@ -1,4 +1,6 @@
 import { Calendar, Users, Target } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const AboutSection = () => {
   return (
@@ -113,6 +115,15 @@ const AboutSection = () => {
                 We believe in lifelong learning and constant skill development
               </p>
             </div>
+          </div>
+
+          {/* CTA Button */}
+          <div className="text-center mt-16">
+            <Link to="/about">
+              <Button size="lg" className="px-8">
+                Know More About Us
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
