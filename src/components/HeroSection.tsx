@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Code, GitBranch, Users } from "lucide-react";
+import { ArrowRight, Code, GitBranch, Link, Users } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -29,11 +29,9 @@ const HeroSection = () => {
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>
             </a>
-            <a href="https://drive.google.com/file/d/1r6jTANpXAOOXaXwV8aQsLgQpVlGwAso8/view?usp=sharing">
               <Button variant="outline" size="lg">
-                Explore Ecosystem
+                <Link to="/our-ecosystem">Explore Ecosystem</Link>
               </Button>
-            </a>
           </div>
 
           {/* Stats */}
