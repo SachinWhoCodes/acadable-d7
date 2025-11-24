@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Code, GitBranch, Link, Users } from "lucide-react";
+import { ArrowRight, Code, GitBranch, Users } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
