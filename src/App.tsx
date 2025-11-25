@@ -10,6 +10,7 @@ import CoursePage from "./pages/CoursePage";
 import AllCourses from "./pages/AllCourses";
 import CourseDetailPage from "./pages/CourseDetailPage";
 import NotFound from "./pages/NotFound";
+import InnovationPlatform from "./pages/InnovationPlatform";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/course" element={<CoursePage />} />
           <Route path="/our-ecosystem" element={<OurEcosystem />} />
+          <Route path="/innovation-platform" element={<InnovationPlatform />} />
           <Route path="/courses" element={<AllCourses />} />
           <Route path="/course/:courseId" element={<CourseDetailPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

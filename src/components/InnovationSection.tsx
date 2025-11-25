@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Lightbulb, Rocket, Users, DollarSign, Award, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const InnovationSection = () => {
   const steps = [
@@ -138,10 +139,12 @@ const InnovationSection = () => {
 
           {/* Call to Action */}
           <div className="text-center">
-            <Button size="lg" className="group">
-              Submit Your Idea
-              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </Button>
+            <Link to="/innovation-platform">
+              <Button size="lg" className="group">
+                Explore Innovation Platform
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </Link>
             <p className="text-muted-foreground mt-4">
               Have questions? <span className="text-primary cursor-pointer hover:underline">Contact our team</span>
             </p>
