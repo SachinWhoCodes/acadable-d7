@@ -11,6 +11,7 @@ import AllCourses from "./pages/AllCourses";
 import CourseDetailPage from "./pages/CourseDetailPage";
 import NotFound from "./pages/NotFound";
 import InnovationPlatform from "./pages/InnovationPlatform";
+import ScrollToTop from "./ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -20,6 +21,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop/>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
