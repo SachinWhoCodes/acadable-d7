@@ -10,7 +10,7 @@ const AboutLabs = () => {
             // ABOUT
           </div>
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-8">
-            Built in Indore.<br />
+            Built in Bharat.<br />
             <span className="text-muted-foreground">For engineers everywhere.</span>
           </h2>
           <div className="prose prose-lg max-w-none text-muted-foreground space-y-5">
