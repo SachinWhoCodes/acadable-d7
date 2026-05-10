@@ -17,7 +17,7 @@ const items: RoadmapItem[] = [
     name: "QueryMesh",
     tag: "Alpha",
     tagClass: "bg-primary/15 text-primary border-primary/30",
-    desc: "Intelligent query proxy for any database. Optimize, cache, observe — without code changes.",
+    desc: "Intelligent query proxy for any database. Optimize, cache, observe - without code changes.",
     href: "/products/querymesh",
   },
   {
@@ -25,7 +25,7 @@ const items: RoadmapItem[] = [
     name: "LazyServe",
     tag: "Shipping",
     tagClass: "bg-emerald-500/15 text-emerald-500 border-emerald-500/30",
-    desc: "Wake your local server on demand, sleep on idle. Sits between ngrok and your dev stack — your public URL stays alive while your laptop stops melting.",
+    desc: "Wake your local server on demand, sleep on idle. Sits between ngrok and your dev stack - your public URL stays alive while your laptop stops melting.",
     href: "/products/lazyserve",
   },
   {
@@ -47,7 +47,7 @@ const items: RoadmapItem[] = [
     name: "BinaryGarden",
     tag: "Planning",
     tagClass: "bg-muted text-muted-foreground border-border",
-    desc: "A package registry for low-level systems components — small, audited, dependency-free building blocks.",
+    desc: "A package registry for low-level systems components - small, audited, dependency-free building blocks.",
   },
 ];
 
@@ -64,7 +64,7 @@ const ProductsRoadmap = () => {
               What we're building
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Infrastructure most companies ignore — developer tools, applied AI
+              Infrastructure most companies ignore - developer tools, applied AI
               products, and cloud performance systems for engineers who care
               about what runs underneath.
             </p>
@@ -73,7 +73,7 @@ const ProductsRoadmap = () => {
           {/*
             FIX: was `space-y-4`. That uses `> * + *` margin which behaves
             inconsistently when some children are <Link> wrappers and others
-            are plain <div>s — adjacent linked cards end up flush.
+            are plain <div>s - adjacent linked cards end up flush.
             Switching to flex + gap-4 spaces every child uniformly,
             regardless of element type.
           */}

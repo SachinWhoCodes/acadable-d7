@@ -29,8 +29,8 @@ const AboutLabs = () => {
             <p className="text-lg leading-relaxed">
               Acadable Labs is a small team writing the software that other
               software relies on. We care about the parts of the stack that
-              don't get attention — the proxies, the caches, the schedulers,
-              the runtimes — because that's where most of the real performance
+              don't get attention - the proxies, the caches, the schedulers,
+              the runtimes - because that's where most of the real performance
               and reliability problems live.
             </p>
             <p className="text-lg leading-relaxed">
@@ -245,7 +245,7 @@ const ContactModal = ({
           </div>
 
           <p className="text-xs text-muted-foreground text-center pt-2">
-            📧 Direct message, call, or connect — we're responsive and love hearing new ideas.
+            📧 Direct message, call, or connect - we're responsive and love hearing new ideas.
           </p>
         </div>
 

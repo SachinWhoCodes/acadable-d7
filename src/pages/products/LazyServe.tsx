@@ -195,7 +195,7 @@ const HowItWorks = () => {
           <SectionHeader
             tag="// HOW IT WORKS"
             title="Two processes. One cheap. One on-demand."
-            sub="A tiny placeholder proxy holds the port that ngrok points at. Your real server only runs when there's actual traffic — and stops as soon as the room goes quiet."
+            sub="A tiny placeholder proxy holds the port that ngrok points at. Your real server only runs when there's actual traffic - and stops as soon as the room goes quiet."
           />
 
           {/* Architecture diagram */}
@@ -297,7 +297,7 @@ const Capabilities = () => {
     {
       icon: Zap,
       title: "Wakes on real traffic",
-      desc: "First request triggers a spawn. The cold start is ~2–5 seconds depending on your stack — every subsequent request is instant.",
+      desc: "First request triggers a spawn. The cold start is ~2-5 seconds depending on your stack - every subsequent request is instant.",
     },
     {
       icon: Globe,
@@ -307,7 +307,7 @@ const Capabilities = () => {
     {
       icon: Activity,
       title: "Stack-agnostic",
-      desc: "Wraps any command. Node, Python, Go, Rails, Deno — if it boots and listens on a port, LazyServe can sleep it.",
+      desc: "Wraps any command. Node, Python, Go, Rails, Deno - if it boots and listens on a port, LazyServe can sleep it.",
     },
   ];
 
@@ -344,7 +344,7 @@ const Capabilities = () => {
 };
 
 /* -------------------------------------------------------------------------- */
-/*  INSTALL & USAGE — tabbed                                                  */
+/*  INSTALL & USAGE - tabbed                                                  */
 /* -------------------------------------------------------------------------- */
 
 const Install = () => {
@@ -366,7 +366,7 @@ npm i -g lazyserve
 # Flask example with 10-min idle timeout
 lazyserve "python app.py" --port 5000 --idle 10
 
-# Django, FastAPI, anything that listens on a port — same shape.`,
+# Django, FastAPI, anything that listens on a port - same shape.`,
     custom: `# Custom idle timeout, ngrok auth + region
 lazyserve "node server.js" \\
   --port 3000 \\
@@ -453,7 +453,7 @@ const Options = () => {
     },
     {
       flag: "--domain",
-      def: "—",
+      def: "-",
       desc: "Custom ngrok domain (paid plans).",
     },
     {
@@ -501,7 +501,7 @@ const Options = () => {
 
           <div className="mt-6 rounded-xl border border-border bg-card p-5 text-sm text-muted-foreground">
             <span className="font-mono text-xs text-primary">// PORT LAYOUT </span>
-            By default your real server runs on <code className="font-mono text-foreground">:3000</code> and the placeholder on <code className="font-mono text-foreground">:4000</code> — ngrok points at the placeholder. Override either with <code className="font-mono text-foreground">--port</code> or <code className="font-mono text-foreground">--proxy-port</code>.
+            By default your real server runs on <code className="font-mono text-foreground">:3000</code> and the placeholder on <code className="font-mono text-foreground">:4000</code> - ngrok points at the placeholder. Override either with <code className="font-mono text-foreground">--port</code> or <code className="font-mono text-foreground">--proxy-port</code>.
           </div>
         </div>
       </div>
@@ -653,7 +653,7 @@ const FAQ = () => {
     },
     {
       q: "Will webhooks miss requests?",
-      a: "No — the placeholder proxy is always listening, so the request is held while your server boots, then forwarded. As long as the caller's timeout is longer than your cold start, you're good. For very impatient webhooks, drop --idle to keep the server warmer for longer.",
+      a: "No - the placeholder proxy is always listening, so the request is held while your server boots, then forwarded. As long as the caller's timeout is longer than your cold start, you're good. For very impatient webhooks, drop --idle to keep the server warmer for longer.",
     },
     {
       q: "Does LazyServe replace ngrok?",
@@ -661,15 +661,15 @@ const FAQ = () => {
     },
     {
       q: "What happens to long-running connections?",
-      a: "WebSocket and SSE connections keep the server alive — the idle timer resets on traffic. When the last connection drops and the idle window passes, the server sleeps as usual.",
+      a: "WebSocket and SSE connections keep the server alive - the idle timer resets on traffic. When the last connection drops and the idle window passes, the server sleeps as usual.",
     },
     {
       q: "Can I use it without ngrok?",
-      a: "The current build assumes ngrok as the public-tunnel layer. If you want it to work standalone (just the wake/sleep behavior on a local port), open an issue — it's a small change and we'll prioritize it if there's demand.",
+      a: "The current build assumes ngrok as the public-tunnel layer. If you want it to work standalone (just the wake/sleep behavior on a local port), open an issue - it's a small change and we'll prioritize it if there's demand.",
     },
     {
       q: "Is this production-grade?",
-      a: "It's intended for development, demos, and personal projects — exactly the cases where you want a public URL without a server farm. Don't put it in front of production traffic; it's not what it's for.",
+      a: "It's intended for development, demos, and personal projects - exactly the cases where you want a public URL without a server farm. Don't put it in front of production traffic; it's not what it's for.",
     },
   ];
 

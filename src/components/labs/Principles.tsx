@@ -17,7 +17,7 @@ const principles = [
   {
     n: "04",
     t: "Infrastructure, not abstractions",
-    d: "We don't hide the machine — we make it faster to work with.",
+    d: "We don't hide the machine - we make it faster to work with.",
   },
 ];
 

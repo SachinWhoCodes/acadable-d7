@@ -94,7 +94,7 @@ const ProductHero = () => {
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed mb-10">
             QueryMesh is an intelligent proxy that sits between your application
             and your database. It rewrites slow queries, caches repeated reads,
-            and catches N+1 patterns before they reach production — all by
+            and catches N+1 patterns before they reach production - all by
             pointing your <code className="font-mono text-foreground">DATABASE_URL</code> at it.
           </p>
 
@@ -217,7 +217,7 @@ const Architecture = () => {
               />
               <PipelineDetail
                 step="Observe"
-                desc="Every plan, every regression, every slow query — exported as OpenTelemetry."
+                desc="Every plan, every regression, every slow query - exported as OpenTelemetry."
               />
             </div>
           </div>
@@ -253,7 +253,7 @@ const PipelineDetail = ({ step, desc }: { step: string; desc: string }) => (
 );
 
 /* -------------------------------------------------------------------------- */
-/*  WHAT IT DOES — feature blocks with real examples                          */
+/*  WHAT IT DOES - feature blocks with real examples                          */
 /* -------------------------------------------------------------------------- */
 
 const WhatItDoes = () => {
@@ -288,7 +288,7 @@ WHERE u.active = true;`}
             <Capability
               icon={Gauge}
               title="Read caching with row-level invalidation"
-              desc="Repeated reads served from memory in microseconds. Writes invalidate exactly the rows they touch — no TTL guessing, no stale-read windows."
+              desc="Repeated reads served from memory in microseconds. Writes invalidate exactly the rows they touch - no TTL guessing, no stale-read windows."
               before={`-- 14,000 identical reads/min hitting Postgres
 SELECT * FROM feature_flags
 WHERE org_id = $1 AND name = $2;`}
@@ -301,7 +301,7 @@ WHERE org_id = $1 AND name = $2;`}
             <Capability
               icon={ShieldCheck}
               title="Pre-prod regression detection"
-              desc="Run QueryMesh in your CI environment and it flags any query that got slower, any new N+1, any plan change — before the PR merges."
+              desc="Run QueryMesh in your CI environment and it flags any query that got slower, any new N+1, any plan change - before the PR merges."
               before={`# In your CI logs
 ✗ users#index introduced N+1 (47 queries, was 1)
 ✗ orders.summary plan changed (Index Scan → Seq Scan)
@@ -406,7 +406,7 @@ const Benchmarks = () => {
           <SectionHeader
             tag="// BENCHMARKS"
             title="Numbers from a real workload."
-            sub="Measured on the open pgbench TPC-B variant against Postgres 16. Workload: 64 connections, 30-minute run, EU-Central. Reproduce it yourself — the harness is open source."
+            sub="Measured on the open pgbench TPC-B variant against Postgres 16. Workload: 64 connections, 30-minute run, EU-Central. Reproduce it yourself - the harness is open source."
           />
 
           <div className="grid md:grid-cols-3 gap-4 mb-6">
@@ -434,7 +434,7 @@ const Benchmarks = () => {
             <span className="font-mono text-xs text-primary">// CAVEAT </span>
             These are alpha numbers from a controlled benchmark. Your workload
             will be different. We publish the harness, the raw output, and the
-            commit hash with every release —{" "}
+            commit hash with every release -{" "}
             <a
               href="https://github.com/acadable"
               target="_blank"
@@ -503,7 +503,7 @@ export DATABASE_URL=postgres://user:pw@localhost:6543/app
 
 import { Pool } from "pg";
 const pool = new Pool({ connectionString: process.env.DATABASE_URL });`,
-    django: `# settings.py — no change needed.
+    django: `# settings.py - no change needed.
 # Just update DATABASE_URL in your environment:
 #
 #   DATABASE_URL=postgres://user:pw@querymesh:6543/app
@@ -514,13 +514,13 @@ DATABASES = {
         conn_max_age=600,
     )
 }`,
-    rails: `# config/database.yml — no change.
+    rails: `# config/database.yml - no change.
 # Just update DATABASE_URL:
 #
 #   DATABASE_URL=postgres://user:pw@querymesh:6543/app
 
 # ActiveRecord connects through QueryMesh transparently.
-# Your migrations, your queries, your fixtures — unchanged.`,
+# Your migrations, your queries, your fixtures - unchanged.`,
   };
 
   const tabs: { id: typeof tab; label: string }[] = [
@@ -683,11 +683,11 @@ const FAQ = () => {
   const items = [
     {
       q: "Is this safe to put in front of my production database?",
-      a: "Not yet — we're in private alpha and we say so loudly. The current build is intended for staging, CI, and dev environments. We will not recommend production until we've published a third-party audit and have at least three months of stability data.",
+      a: "Not yet - we're in private alpha and we say so loudly. The current build is intended for staging, CI, and dev environments. We will not recommend production until we've published a third-party audit and have at least three months of stability data.",
     },
     {
       q: "How is this different from a query cache like Redis?",
-      a: "Redis is a key-value store you have to integrate with explicitly — you write the cache logic, you handle invalidation. QueryMesh sits at the wire level and does both transparently. Your code keeps issuing SQL; cache hits and invalidation happen automatically.",
+      a: "Redis is a key-value store you have to integrate with explicitly - you write the cache logic, you handle invalidation. QueryMesh sits at the wire level and does both transparently. Your code keeps issuing SQL; cache hits and invalidation happen automatically.",
     },
     {
       q: "What about writes? Does the cache get stale?",
@@ -699,7 +699,7 @@ const FAQ = () => {
     },
     {
       q: "Is QueryMesh actually open source?",
-      a: "Yes — MIT-licensed core, and we mean it. Source-available with a custom 'no compete' clause is not open source and we don't ship that. If we ever offer a managed version, the proxy itself stays MIT.",
+      a: "Yes - MIT-licensed core, and we mean it. Source-available with a custom 'no compete' clause is not open source and we don't ship that. If we ever offer a managed version, the proxy itself stays MIT.",
     },
     {
       q: "How do I run it in production once it's stable?",

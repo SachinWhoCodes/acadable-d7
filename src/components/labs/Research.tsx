@@ -17,7 +17,7 @@ const items: ResearchItem[] = [
     slug: "assembly-ai-lab",
     title: "Assembly AI Lab",
     blurb:
-      "A multi-agent constitutional deliberation platform. Upload a constitution, watch AI delegates debate it clause by clause through a deterministic procedural workflow — opening statements, rebuttals, amendments, voting, and a final narrative report.",
+      "A multi-agent constitutional deliberation platform. Upload a constitution, watch AI delegates debate it clause by clause through a deterministic procedural workflow - opening statements, rebuttals, amendments, voting, and a final narrative report.",
     authors: ["Sachin Verma", "Rishi Raj Das"],
     period: "Jan – May 2026",
     tags: ["Multi-agent systems", "LLM orchestration", "Document intelligence"],
@@ -40,7 +40,7 @@ const Research = () => {
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Alongside our products, we publish working prototypes and
-              technical write-ups on the problems we find interesting — so
+              technical write-ups on the problems we find interesting - so
               other engineers can build on them.
             </p>
           </div>

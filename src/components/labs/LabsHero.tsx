@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 
 /**
- * LabsHero — "the infrastructure layer, made visible"
+ * LabsHero - "the infrastructure layer, made visible"
  *
  * Three z-layers: ambient grid + signal pulse → glow halos → content.
  * The proof strip is the focal payoff: three real things you can verify.
@@ -30,11 +30,11 @@ const LabsHero = () => {
         <div className="max-w-5xl mx-auto">
           <StatusRibbon />
 
-          {/* Headline — staggered reveal via animation-delay below */}
+          {/* Headline - staggered reveal via animation-delay below */}
           <h1 className="hero-reveal hero-reveal-1 text-5xl md:text-7xl lg:text-[5.5rem] font-bold tracking-tight leading-[0.98] mb-7 max-w-5xl">
             The boring infrastructure
             <br />
-            underneath your stack —{" "}
+            underneath your stack - 
             <span className="relative inline-block">
               <span className="text-primary italic font-serif">done well</span>
               <Underline />
@@ -78,7 +78,7 @@ const LabsHero = () => {
             </Button>
           </div>
 
-          {/* Proof strip — replaces the old fake terminal */}
+          {/* Proof strip - replaces the old fake terminal */}
           <ProofStrip />
         </div>
       </div>
@@ -86,14 +86,14 @@ const LabsHero = () => {
       {/* Scroll indicator */}
       <ScrollHint />
 
-      {/* Local CSS for the hero — keeps everything self-contained */}
+      {/* Local CSS for the hero - keeps everything self-contained */}
       <style>{heroStyles}</style>
     </section>
   );
 };
 
 /* -------------------------------------------------------------------------- */
-/*  Status ribbon — three live signals                                        */
+/*  Status ribbon - three live signals                                        */
 /* -------------------------------------------------------------------------- */
 
 const StatusRibbon = () => {
@@ -141,7 +141,7 @@ const Dot = ({ color }: { color: "emerald" | "primary" | "purple" }) => {
 };
 
 /* -------------------------------------------------------------------------- */
-/*  Underline — animated brushstroke beneath "done well"                      */
+/*  Underline - animated brushstroke beneath "done well"                      */
 /* -------------------------------------------------------------------------- */
 
 const Underline = () => (
@@ -163,7 +163,7 @@ const Underline = () => (
 );
 
 /* -------------------------------------------------------------------------- */
-/*  Proof strip — three real cards, animated entry, count-up metrics          */
+/*  Proof strip - three real cards, animated entry, count-up metrics          */
 /* -------------------------------------------------------------------------- */
 
 const ProofStrip = () => {
@@ -184,7 +184,7 @@ const ProofStrip = () => {
       eyebrow: "ALPHA",
       eyebrowClass: "text-primary border-primary/40 bg-primary/10",
       title: "QueryMesh",
-      desc: "Intelligent query proxy. Optimize, cache, observe — without code changes.",
+      desc: "Intelligent query proxy. Optimize, cache, observe - without code changes.",
       metric: { value: 73, suffix: "%", label: "p99 reduction", count: true },
       href: "/products/querymesh",
     },
@@ -239,7 +239,7 @@ const ProofCard = ({ item }: { item: ProofItem }) => {
       to={item.href}
       className="group relative block p-5 rounded-xl border border-border bg-card/80 backdrop-blur-sm hover:border-primary/40 hover:bg-card transition-all duration-300 overflow-hidden"
     >
-      {/* hover sweep — subtle gradient that fades in on hover */}
+      {/* hover sweep - subtle gradient that fades in on hover */}
       <div
         className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
         style={{
@@ -289,7 +289,7 @@ const ProofCard = ({ item }: { item: ProofItem }) => {
 };
 
 /* -------------------------------------------------------------------------- */
-/*  CountUp — small dependency-free animated number                           */
+/*  CountUp - small dependency-free animated number                           */
 /* -------------------------------------------------------------------------- */
 
 const CountUp = ({ end, duration = 1400 }: { end: number; duration?: number }) => {
@@ -315,7 +315,7 @@ const CountUp = ({ end, duration = 1400 }: { end: number; duration?: number }) =
             const start = performance.now();
             const tick = (now: number) => {
               const t = Math.min((now - start) / duration, 1);
-              // easeOutCubic — comes in fast, settles
+              // easeOutCubic - comes in fast, settles
               const eased = 1 - Math.pow(1 - t, 3);
               setVal(Math.round(eased * end));
               if (t < 1) requestAnimationFrame(tick);
@@ -335,7 +335,7 @@ const CountUp = ({ end, duration = 1400 }: { end: number; duration?: number }) =
 };
 
 /* -------------------------------------------------------------------------- */
-/*  Ambient backdrop — grid + radial glow + traveling signal                  */
+/*  Ambient backdrop - grid + radial glow + traveling signal                  */
 /* -------------------------------------------------------------------------- */
 
 const AmbientBackdrop = () => {
@@ -356,18 +356,18 @@ const AmbientBackdrop = () => {
         }}
       />
 
-      {/* Primary glow — anchored top-left for diagonal flow */}
+      {/* Primary glow - anchored top-left for diagonal flow */}
       <div
         aria-hidden
         className="absolute top-[10%] left-[15%] w-[560px] h-[560px] rounded-full bg-primary/15 blur-[140px] pointer-events-none"
       />
-      {/* Counter-glow — bottom-right, subtler */}
+      {/* Counter-glow - bottom-right, subtler */}
       <div
         aria-hidden
         className="absolute bottom-[5%] right-[10%] w-[420px] h-[420px] rounded-full bg-primary/8 blur-[120px] pointer-events-none"
       />
 
-      {/* Signal pulse — a thin orange line that travels horizontally,
+      {/* Signal pulse - a thin orange line that travels horizontally,
           evoking a packet moving through the proxy. CSS-only. */}
       <div
         aria-hidden
@@ -376,7 +376,7 @@ const AmbientBackdrop = () => {
         <div className="hero-signal" />
       </div>
 
-      {/* Bottom fade — content fades into the next section instead of cutting */}
+      {/* Bottom fade - content fades into the next section instead of cutting */}
       <div
         aria-hidden
         className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-background pointer-events-none"
@@ -400,7 +400,7 @@ const ScrollHint = () => (
 );
 
 /* -------------------------------------------------------------------------- */
-/*  Hero CSS — staggered reveal, signal pulse, underline draw, scroll hint   */
+/*  Hero CSS - staggered reveal, signal pulse, underline draw, scroll hint   */
 /* -------------------------------------------------------------------------- */
 
 const heroStyles = `
@@ -429,7 +429,7 @@ const heroStyles = `
     stroke-dashoffset: 250;
   }
 
-  /* Signal pulse — a glowing orange streak that travels left to right */
+  /* Signal pulse - a glowing orange streak that travels left to right */
   @keyframes hero-signal-travel {
     0%   { transform: translateX(-30%); opacity: 0; }
     10%  { opacity: 1; }

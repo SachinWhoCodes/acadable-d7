@@ -44,7 +44,7 @@ const AssemblyAILabPage = () => {
 };
 
 /* -------------------------------------------------------------------------- */
-/*  HERO — paper-style                                                        */
+/*  HERO - paper-style                                                        */
 /* -------------------------------------------------------------------------- */
 
 const PaperHero = () => {
@@ -96,11 +96,11 @@ const PaperHero = () => {
             Assembly AI Lab
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed mb-10 font-light">
-            A multi-agent constitutional deliberation platform — turning legal
+            A multi-agent constitutional deliberation platform - turning legal
             text into structured, observable debate between AI delegates.
           </p>
 
-          {/* Authors / metadata block — academic style */}
+          {/* Authors / metadata block - academic style */}
           <div className="rounded-xl border border-border bg-card p-5 md:p-6 mb-8">
             <div className="grid sm:grid-cols-2 gap-5">
               <Meta icon={Users} label="Authors">
@@ -182,7 +182,7 @@ const Abstract = () => {
               constitutional assembly using AI delegates. A user uploads a
               constitution or passage of law, the system parses it into
               clause-level units, and an orchestrator runs a structured
-              deliberation session — speaker election, clause-by-clause debate,
+              deliberation session - speaker election, clause-by-clause debate,
               amendments, voting, summaries, and a final narrative report.
             </p>
             <p className="text-muted-foreground">
@@ -285,22 +285,22 @@ const Architecture = () => {
                 LIVE STATE BUS
               </div>
               <div className="text-sm text-muted-foreground">
-                Frontend reads live session state directly from Firestore — no
+                Frontend reads live session state directly from Firestore - no
                 polling required.
               </div>
             </div>
 
-            {/* Bottom tier — speech + LLMs */}
+            {/* Bottom tier - speech + LLMs */}
             <div className="grid md:grid-cols-2 gap-4 mt-6">
               <ArchBox
                 label="Browser Speech Synthesis"
                 sub="Web Speech API"
-                detail="Playback ACK loop for serialized spoken turns — the workspace plays delegate speech client-side and notifies the backend on completion."
+                detail="Playback ACK loop for serialized spoken turns - the workspace plays delegate speech client-side and notifies the backend on completion."
               />
               <ArchBox
                 label="LLM Providers"
                 sub="Adapter layer"
-                detail="Groq (default), Gemini, Ollama, xAI — swappable behind one interface."
+                detail="Groq (default), Gemini, Ollama, xAI - swappable behind one interface."
               />
             </div>
           </div>
@@ -360,7 +360,7 @@ const Caption = ({
 );
 
 /* -------------------------------------------------------------------------- */
-/*  METHODOLOGY — orchestration flow                                          */
+/*  METHODOLOGY - orchestration flow                                          */
 /* -------------------------------------------------------------------------- */
 
 const Methodology = () => {
@@ -369,7 +369,7 @@ const Methodology = () => {
       icon: FileText,
       step: "1",
       title: "Constitution ingestion",
-      desc: "User uploads a PDF or TXT. Backend extracts text and applies parsing logic to detect headings — article, section, part. Each clause becomes a Firestore document under a parent constitution. When no clean structure is detected, the system falls back to chunk-based segmentation so a session can still proceed.",
+      desc: "User uploads a PDF or TXT. Backend extracts text and applies parsing logic to detect headings - article, section, part. Each clause becomes a Firestore document under a parent constitution. When no clean structure is detected, the system falls back to chunk-based segmentation so a session can still proceed.",
     },
     {
       icon: Workflow,
@@ -464,11 +464,11 @@ const Findings = () => {
             />
             <Finding
               title="Firestore as a live event bus"
-              body="Subscribing the workspace directly to session documents and subcollections eliminated a polling loop and let the UI animate as the orchestrator wrote events — closer to a streaming-state model than a request-response one."
+              body="Subscribing the workspace directly to session documents and subcollections eliminated a polling loop and let the UI animate as the orchestrator wrote events - closer to a streaming-state model than a request-response one."
             />
             <Finding
               title="Clause-level document intelligence"
-              body="Treating ingestion as a parser problem (headings → clause records) rather than free-form chunking made every later step — debate, amendment, vote, summary — addressable per clause and traceable back to the source document."
+              body="Treating ingestion as a parser problem (headings - clause records) rather than free-form chunking made every later step - debate, amendment, vote, summary - addressable per clause and traceable back to the source document."
             />
             <Finding
               title="Procedural orchestrator over free chat"
@@ -486,7 +486,7 @@ const Findings = () => {
               richness exceeding their current implementation maturity.
             </p>
             <div className="mt-4 text-xs font-mono text-muted-foreground">
-              — From the project's own results & discussion section
+              - From the project's own results & discussion section
             </div>
           </div>
         </div>
@@ -530,7 +530,7 @@ const KnownGaps = () => {
     },
     {
       area: "Test coverage",
-      gap: "Confidence is largely from static analysis and manual verification — minimal integration or smoke tests in the repo.",
+      gap: "Confidence is largely from static analysis and manual verification - minimal integration or smoke tests in the repo.",
       impact: "Regressions hard to catch automatically.",
     },
     {
@@ -626,7 +626,7 @@ const FutureWork = () => {
     {
       n: "01",
       t: "Contract unification",
-      d: "A single shared schema for session config, metrics, and reports — synchronized across backend and frontend so every visible field has a runtime impact.",
+      d: "A single shared schema for session config, metrics, and reports - synchronized across backend and frontend so every visible field has a runtime impact.",
     },
     {
       n: "02",

@@ -6,7 +6,7 @@ const features = [
   {
     icon: Zap,
     title: "Auto-optimized queries",
-    desc: "Rewrites, indexes hints, and plan analysis on every request — without touching your ORM.",
+    desc: "Rewrites, indexes hints, and plan analysis on every request - without touching your ORM.",
   },
   {
     icon: Gauge,
@@ -40,7 +40,7 @@ const QueryMeshSection = () => {
               </h2>
               <p className="text-xl text-muted-foreground leading-relaxed mb-6">
                 An intelligent query proxy that sits between your application
-                and your database — automatically optimizing every query,
+                and your database - automatically optimizing every query,
                 caching repeated requests, and catching performance problems
                 before they reach production.
               </p>
