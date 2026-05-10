@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Github, Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
-import acadableLogoLight from "@/assets/acadable-logo-light.jpg";
+import acadableLogoLight from "@/assets/acadable-logo-light.png";
 import acadableLogoDark from "@/assets/acadable-logo-dark.jpg";
 
 const links = [
@@ -29,7 +29,7 @@ const LabsNavbar = () => {
             <img
               src={theme === "dark" ? acadableLogoDark : acadableLogoLight}
               alt="Acadable Labs"
-              className="h-7 w-auto"
+              className="h-8 w-auto"
             />
             <span className="text-xs font-mono tracking-widest text-muted-foreground hidden sm:inline">
               / LABS
