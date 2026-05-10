@@ -2,22 +2,189 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Acadable Labs — Infrastructure for the software underneath your software</title>
-    <meta name="description" content="Acadable Labs builds developer tools, applied AI research products, and cloud performance systems. QueryMesh, our intelligent query proxy, optimizes every database query with zero code changes." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+    <!-- ====================================================================
+         PRIMARY META
+         ==================================================================== -->
+    <title>Acadable Labs - Infrastructure for the software underneath your software</title>
+    <meta
+      name="description"
+      content="Acadable Labs builds developer tools, applied AI research, and cloud performance systems. Two products shipping, one in private alpha. Open source by default, obsessed with performance, allergic to lock-in."
+    />
     <meta name="author" content="Acadable Labs" />
+    <meta
+      name="keywords"
+      content="developer tools, infrastructure, query proxy, ngrok, database optimization, applied AI, multi-agent systems, open source, Acadable Labs, QueryMesh, LazyServe, Assembly AI Lab"
+    />
 
-    <meta property="og:title" content="Acadable Labs — Core infrastructure for engineers" />
-    <meta property="og:description" content="Open-source developer tools and performance systems. Meet QueryMesh: an intelligent query proxy that sits between your app and your database." />
+    <!-- Canonical URL — change once your production domain is final -->
+    <link rel="canonical" href="https://acadable.com/" />
+
+    <!-- Robots -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+
+    <!-- ====================================================================
+         BROWSER CHROME — color the address bar to match the theme
+         ==================================================================== -->
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0a0a0b" media="(prefers-color-scheme: dark)" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Acadable Labs" />
+    <meta name="application-name" content="Acadable Labs" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- ====================================================================
+         FAVICON & APP ICONS
+         ==================================================================== -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <!-- Add these once you generate them; safe to leave commented:
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#FF4F18" />
+    <link rel="manifest" href="/site.webmanifest" />
+    -->
+
+    <!-- ====================================================================
+         OPEN GRAPH (Facebook, LinkedIn, Slack, Discord, etc.)
+         ==================================================================== -->
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta property="og:site_name" content="Acadable Labs" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="https://acadable.com/" />
+    <meta property="og:title" content="Acadable Labs — Core infrastructure for engineers" />
+    <meta
+      property="og:description"
+      content="The boring infrastructure underneath your stack — done well. Proxies, caches, dev-loop tools, and applied AI research from a small team in Indore."
+    />
+    <!--
+      OG image: place a 1200×630 PNG at /public/og-image.png in your repo.
+      The reference path "/og-image.png" works in dev and prod under the
+      configured domain. Until the file exists, link previews show no image
+      (better than the placeholder Lovable image, which made the site look
+      unfinished).
+    -->
+    <meta property="og:image" content="https://acadable.com/og-image.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Acadable Labs — infrastructure for engineers who care what runs underneath." />
 
+    <!-- ====================================================================
+         TWITTER / X
+         ==================================================================== -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta name="twitter:site" content="@acadable" />
+    <meta name="twitter:creator" content="@acadable" />
+    <meta name="twitter:title" content="Acadable Labs — Core infrastructure for engineers" />
+    <meta
+      name="twitter:description"
+      content="Two products shipping, one in private alpha. Open source by default. Built in Indore."
+    />
+    <meta name="twitter:image" content="https://acadable.com/og-image.png" />
+    <meta name="twitter:image:alt" content="Acadable Labs — infrastructure for engineers who care what runs underneath." />
+
+    <!-- ====================================================================
+         PERFORMANCE HINTS — preconnect to font CDN that index.css imports
+         ==================================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+
+    <!-- ====================================================================
+         NO-FOUC THEME SCRIPT
+         Runs before React mounts. Reads next-themes' saved value (or system
+         preference) and applies the `dark` class to <html> immediately, so
+         dark-mode users don't see a white flash on first paint.
+         ==================================================================== -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem("theme");
+          var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          var resolved =
+            stored === "dark" || stored === "light"
+              ? stored
+              : prefersDark
+                ? "dark"
+                : "light";
+          if (resolved === "dark") {
+            document.documentElement.classList.add("dark");
+          }
+          document.documentElement.style.colorScheme = resolved;
+        } catch (e) {
+          /* localStorage unavailable (private mode etc.) — fall through */
+        }
+      })();
+    </script>
+
+    <!-- ====================================================================
+         STRUCTURED DATA — helps search engines render your snippet correctly
+         ==================================================================== -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Acadable Labs",
+        "url": "https://acadable.com",
+        "logo": "https://acadable.com/logo.png",
+        "description": "Acadable Labs builds developer tools, applied AI research products, and cloud performance systems.",
+        "foundingLocation": {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Indore",
+            "addressCountry": "IN"
+          }
+        },
+        "sameAs": [
+          "https://github.com/acadable",
+          "https://twitter.com/acadable",
+          "https://linkedin.com/company/acadable"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "hello@acadable.com",
+          "contactType": "general"
+        }
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Acadable Labs",
+        "url": "https://acadable.com",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Acadable Labs"
+        }
+      }
+    </script>
   </head>
 
   <body>
     <div id="root"></div>
+
+    <!-- Accessible message for users with JavaScript disabled -->
+    <noscript>
+      <div style="padding: 2rem; font-family: system-ui, -apple-system, sans-serif; max-width: 40rem; margin: 4rem auto; line-height: 1.6;">
+        <h1 style="font-size: 1.5rem; margin-bottom: 1rem;">Acadable Labs</h1>
+        <p>This site is built as a single-page application and requires JavaScript to view. Please enable JavaScript in your browser, or visit our products directly:</p>
+        <ul style="margin-top: 1rem;">
+          <li><a href="https://www.npmjs.com/package/lazyserve">LazyServe on npm</a></li>
+          <li><a href="https://github.com/SachinWhoCodes/lazyserve">LazyServe source on GitHub</a></li>
+          <li><a href="mailto:hello@acadable.com">hello@acadable.com</a></li>
+        </ul>
+      </div>
+    </noscript>
+
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
