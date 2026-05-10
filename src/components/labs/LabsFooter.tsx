@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Github, Linkedin, Twitter, Mail } from "lucide-react";
 
 const LabsFooter = () => {
@@ -5,7 +6,7 @@ const LabsFooter = () => {
     <footer className="border-t border-border bg-background">
       <div className="container mx-auto px-4 py-14">
         <div className="grid md:grid-cols-4 gap-10 mb-10">
-          <div className="md:col-span-2">
+          <div>
             <div className="text-xl font-bold tracking-tight mb-3">
               ACADABLE <span className="text-primary">/ LABS</span>
             </div>
@@ -20,9 +21,64 @@ const LabsFooter = () => {
               PRODUCT
             </h4>
             <ul className="space-y-2.5 text-sm">
-              <li><a href="#querymesh" className="hover:text-primary transition-colors">QueryMesh</a></li>
-              <li><a href="#products" className="hover:text-primary transition-colors">Roadmap</a></li>
-              <li><a href="https://github.com/acadable" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Documentation</a></li>
+              <li>
+                <Link
+                  to="/products/querymesh"
+                  className="hover:text-primary transition-colors"
+                >
+                  QueryMesh
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/products/lazyserve"
+                  className="hover:text-primary transition-colors"
+                >
+                  LazyServe
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/#products"
+                  className="hover:text-primary transition-colors"
+                >
+                  Roadmap
+                </Link>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/acadable"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
+                  Documentation
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-xs font-mono text-muted-foreground tracking-widest mb-4">
+              RESEARCH
+            </h4>
+            <ul className="space-y-2.5 text-sm">
+              <li>
+                <Link
+                  to="/research/assembly-ai-lab"
+                  className="hover:text-primary transition-colors"
+                >
+                  Assembly AI Lab
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/#research"
+                  className="hover:text-primary transition-colors"
+                >
+                  All research
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -31,9 +87,30 @@ const LabsFooter = () => {
               COMPANY
             </h4>
             <ul className="space-y-2.5 text-sm">
-              <li><a href="#about" className="hover:text-primary transition-colors">About</a></li>
-              <li><a href="#principles" className="hover:text-primary transition-colors">Principles</a></li>
-              <li><a href="mailto:hello@acadable.dev" className="hover:text-primary transition-colors">Contact</a></li>
+              <li>
+                <Link
+                  to="/#about"
+                  className="hover:text-primary transition-colors"
+                >
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/#principles"
+                  className="hover:text-primary transition-colors"
+                >
+                  Principles
+                </Link>
+              </li>
+              <li>
+                <a
+                  href="mailto:hello@acadable.dev"
+                  className="hover:text-primary transition-colors"
+                >
+                  Contact
+                </a>
+              </li>
             </ul>
           </div>
         </div>

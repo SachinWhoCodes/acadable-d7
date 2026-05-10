@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Database, Zap, Gauge, ShieldCheck, ArrowRight } from "lucide-react";
 
@@ -47,12 +48,14 @@ const QueryMeshSection = () => {
                 Zero code changes. No ORM lock-in. Open source by default.
               </p>
               <div className="flex flex-wrap gap-3">
-                <Button className="font-mono group">
-                  Request alpha access
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                <Button className="font-mono group" asChild>
+                  <Link to="/products/querymesh">
+                    Explore QueryMesh
+                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </Link>
                 </Button>
-                <Button variant="outline" className="font-mono">
-                  Read the docs
+                <Button variant="outline" className="font-mono" asChild>
+                  <Link to="/products/querymesh#alpha">Request alpha access</Link>
                 </Button>
               </div>
             </div>

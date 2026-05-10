@@ -5,6 +5,9 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import QueryMesh from "./pages/products/QueryMesh";
+import LazyServe from "./pages/products/LazyServe";
+import AssemblyAILab from "./pages/research/AssemblyAILab";
 
 const queryClient = new QueryClient();
 
@@ -16,6 +19,9 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/products/querymesh" element={<QueryMesh />} />
+          <Route path="/products/lazyserve" element={<LazyServe />} />
+          <Route path="/research/assembly-ai-lab" element={<AssemblyAILab />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

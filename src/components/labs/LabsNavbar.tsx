@@ -1,13 +1,16 @@
 import { useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Github, Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import acadableLogoLight from "@/assets/acadable-logo-light.png";
 import acadableLogoDark from "@/assets/acadable-logo-dark.jpg";
 
-const links = [
+// Section anchors live on the home page.
+const sectionLinks = [
   { name: "QueryMesh", href: "#querymesh" },
   { name: "Products", href: "#products" },
+  { name: "Research", href: "#research" },
   { name: "Principles", href: "#principles" },
   { name: "About", href: "#about" },
 ];
@@ -15,32 +18,41 @@ const links = [
 const LabsNavbar = () => {
   const [open, setOpen] = useState(false);
   const { theme, setTheme } = useTheme();
+  const location = useLocation();
+  const navigate = useNavigate();
 
-  const scrollTo = (href: string) => {
-    document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+  const onHome = location.pathname === "/";
+
+  // Anchor handler: scroll if we're on home, otherwise route to /#anchor.
+  const goToSection = (href: string) => {
     setOpen(false);
+    if (onHome) {
+      document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      navigate(`/${href}`);
+    }
   };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/70 backdrop-blur-xl border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <a href="#top" className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-2">
             <img
               src={theme === "dark" ? acadableLogoDark : acadableLogoLight}
               alt="Acadable Labs"
-              className="h-8 w-auto"
+              className="h-10 w-auto"
             />
             <span className="text-xs font-mono tracking-widest text-muted-foreground hidden sm:inline">
               / LABS
             </span>
-          </a>
+          </Link>
 
-          <div className="hidden md:flex items-center gap-8">
-            {links.map((l) => (
+          <div className="hidden md:flex items-center gap-7">
+            {sectionLinks.map((l) => (
               <button
                 key={l.name}
-                onClick={() => scrollTo(l.href)}
+                onClick={() => goToSection(l.href)}
                 className="text-sm font-medium text-foreground/70 hover:text-foreground transition-colors"
               >
                 {l.name}
@@ -70,9 +82,9 @@ const LabsNavbar = () => {
             <Button
               size="sm"
               className="hidden md:inline-flex font-mono"
-              onClick={() => scrollTo("#querymesh")}
+              asChild
             >
-              Try QueryMesh
+              <Link to="/products/querymesh">Try QueryMesh</Link>
             </Button>
             <button
               onClick={() => setOpen(!open)}
@@ -86,17 +98,19 @@ const LabsNavbar = () => {
 
         {open && (
           <div className="md:hidden py-4 border-t border-border flex flex-col gap-2">
-            {links.map((l) => (
+            {sectionLinks.map((l) => (
               <button
                 key={l.name}
-                onClick={() => scrollTo(l.href)}
+                onClick={() => goToSection(l.href)}
                 className="text-left py-2 text-sm font-medium text-foreground/80 hover:text-foreground"
               >
                 {l.name}
               </button>
             ))}
-            <Button size="sm" className="mt-2 font-mono" onClick={() => scrollTo("#querymesh")}>
-              Try QueryMesh
+            <Button size="sm" className="mt-2 font-mono" asChild>
+              <Link to="/products/querymesh" onClick={() => setOpen(false)}>
+                Try QueryMesh
+              </Link>
             </Button>
           </div>
         )}
